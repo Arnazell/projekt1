@@ -177,9 +177,6 @@ void Test()
 // ----------------- main + intefrejs do recznego testowania ----------------------
 int main()
 {
-    Test();
-    return 0;
-
     FILE *plik;
     plik=fopen("dane","r");
     int n, wybor;
@@ -226,42 +223,42 @@ int main()
         switch (wybor) {
             case 1: {
                 {
-                    Timer timer("insert_sort", n, "manual");
+                    //Timer timer("insert_sort", n, "manual");
                     insert_sort(tab,n);
                 }
                 break;
             }
             case 2: {
                 {
-                    Timer timer("bubble_sort", n, "manual");
+                    //Timer timer("bubble_sort", n, "manual");
                     bubble_sort(tab,n);
                 }
                 break;
             }
             case 3: {
                 {
-                    Timer timer("selection_sort", n, "manual");
+                    //Timer timer("selection_sort", n, "manual");
                     selection_sort(tab,n);
                 }
                 break;
             }
             case 4: {
                 {
-                    Timer timer("quick_sort", n, "manual");
+                    //Timer timer("quick_sort", n, "manual");
                     quick_sort(tab,0, n-1);
                 }
                 break;
             }
             case 5: {
                 {
-                    Timer timer("shell_sort", n, "manual");
+                    //Timer timer("shell_sort", n, "manual");
                     shell_sort(tab,n);
                 }
                 break;
             }
             case 6: {
                 {
-                    Timer timer("heap_sort", n, "manual");
+                    //Timer timer("heap_sort", n, "manual");
                     heap_sort(tab,n);
                 }
                 break;
@@ -271,14 +268,13 @@ int main()
                 break;
             }
         }
-
+        //5. wypisanie posortowanej tablicy
+        for(int i=0;i<n;i++)
+        {
+            std::cout<< tab[i]<<" ";
+        }
+        std::cout<<std::endl;
     }
-
-        // 5. wypisanie posortowanej tablicy
-        //for(int i=0;i<n;i++)
-    // {
-        // std::cout<< tab[i]<<" ";
-    // }
 }
 
 
